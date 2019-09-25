@@ -1,35 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
 import Grid from './grid';
 
 
-class App extends React.Component {
+class App extends Component {
   render() {
     const cells = [];
-    for (let col = 0; col < 7; col++) {
-      const eachCol = [];
-      for (let row = 0; row < 6; row++) {
-        eachCol.push(<Grid row={row} col={col}></Grid>)
+    for (let row = 0; row < 6; row++) {
+      const eachRow = [];
+      for (let col = 0; col < 7; col++) {
+        eachRow.push(<Grid row={row} col={col} />)
       }
-      cells.push(<div>{eachCol}</div>)
+      cells.push(<div className="row">{eachRow}</div>)
     }
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        {cells}
       </div>
     );
 

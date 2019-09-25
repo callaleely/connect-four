@@ -1,17 +1,13 @@
-import React from 'react'; 
+import React, {Component} from 'react'; 
 
-class Grid extends React.Component {
-    constructor() {
-    }
-
-
+class Grid extends Component {
     handleClick() {
         // drop the stone 
     }
     
     render() {
         return (
-            <div onClick={() => this.handleClick()}>
+            <div className="cell" onClick={() => this.handleClick()}>
                 <p>
                     {this.props.row}, {this.props.col}
                 </p>
