@@ -1,7 +1,7 @@
 import {createStore} from 'redux';
 
 const initial = {
-    currentTurn: 'RED', // or 'BLACK'
+    currentTurn: 'BLACK', // or 'RED'
     board: [
         [],
         [],
@@ -14,8 +14,10 @@ const initial = {
 };
 
 function reducer(state, action) {
-    if (action.type === "COL_CLICK")
-    console.log('dropping onto col' + action.clicked)
+    if (action.type === "COL_CLICK"){
+        
+    }
+    
 }
 
 export default createStore(reducer, initial)
